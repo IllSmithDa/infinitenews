@@ -26,5 +26,11 @@
   }
 }
 
-
+@media(max-width: 850px) {
+  .searchbar-container {
+    div {
+      width: 90%;
+    }
+  }
+}
 
