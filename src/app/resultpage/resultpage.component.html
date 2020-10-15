@@ -16,18 +16,18 @@
             <h1>Results for {{searchQuery}}</h1>
         </div>
         <div class="result-container">
-            <div *ngFor="let result of resultList" class="news-card">
+            <div *ngFor="let result of resultList" class="news-item">
                 <div>
                     <div class="image-container">
                         <img src="{{result.image}}"/>
                     </div>
                 </div>
-                <div>
+                <div class="news-text">
                     <h1>{{result.newsIndex}}. <a target="_blank" href="{{result.url}}" >{{result.title}}</a></h1>
                     <p>Source: <a target="_blank" href="https://{{result.provider}}">{{result.provider}}</a></p>
                     <p>{{result.date}}</p>
                     <p>{{result.description}}</p>
-                    <p><a target="_blank" href="{{result.url}}" >See Full Story</a></p>
+                    <span><a target="_blank" href="{{result.url}}" >See Full Story</a></span>
                 </div>
             </div>
         </div>
