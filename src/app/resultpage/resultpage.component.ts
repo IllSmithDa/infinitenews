@@ -67,7 +67,7 @@ export class ResultpageComponent implements OnInit {
       },
       headers: {
         "x-rapidapi-host": "webit-news-search.p.rapidapi.com",
-        "x-rapidapi-key": "ad2d5e1988mshaf187ed2494f60bp1258a4jsne733ba5dd9fb",
+        "x-rapidapi-key": process.env.RAPID_API_KEY,
   
         "useQueryString": true
       }
@@ -122,7 +122,7 @@ export class ResultpageComponent implements OnInit {
       },
       headers: {
         "x-rapidapi-host": "webit-news-search.p.rapidapi.com",
-        "x-rapidapi-key": "ad2d5e1988mshaf187ed2494f60bp1258a4jsne733ba5dd9fb",
+        "x-rapidapi-key": process.env.RAPID_API_KEY,
   
         "useQueryString": true
       }
