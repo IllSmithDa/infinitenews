@@ -26,7 +26,7 @@
     display: none;
 }
 #collapsibleNavbar {
-    background-color: #000;
+    background-color: #202020;
     text-align: center;
 }
 .nav-item {
@@ -39,17 +39,18 @@
     color: #FFF;
 }
 .mobile-nav-button {
-    background-color: #000;
+    background-color: #202020;
     color: #FFF;
     font-size: 1.2rem;
     border-radius: .3rem;
     border: 1px #000 solid;
+    outline: none;
 }
 @media(max-width: 1200px) {
     .navbar-display {
         display: flex;
         justify-content: space-between;
-        background-color: #000;
+        background-color: #202020;
     }
     .comp-container {
         display: none;
