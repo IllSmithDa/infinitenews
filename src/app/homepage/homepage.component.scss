@@ -1,0 +1,26 @@
+.landing-container {
+    background-image: url('https://images.pexels.com/photos/41949/earth-earth-at-night-night-lights-41949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-position: center; 
+    min-height: 100vh;
+  }
+.landing-title {
+  min-height: 5vh;
+}
+.landing-title {
+   h1 {
+     font-size: 2rem;
+     margin-left: 2rem;
+     color: #FFF;
+   }
+}
+.input-display {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; 
+  min-height: 85vh;
+}
+
+
+

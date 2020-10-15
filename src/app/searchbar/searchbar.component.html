@@ -1,0 +1,8 @@
+<div class="input-container">
+    <h1>Search For News</h1>
+    <div class="search-container">
+        <input (change)="updateQuery($event.target.id, $event.target.value)" />
+        <img src="https://image.flaticon.com/icons/svg/49/49116.svg" (click)="goToResults()"/>
+    
+    </div>
+</div>
