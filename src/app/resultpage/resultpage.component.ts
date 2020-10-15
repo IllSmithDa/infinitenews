@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 
 import axios from 'axios';
+import { environment } from 'src/environments/environment';
 import { Url }from 'url';
 @Component({
   selector: 'app-resultpage',
@@ -67,7 +68,7 @@ export class ResultpageComponent implements OnInit {
       },
       headers: {
         "x-rapidapi-host": "webit-news-search.p.rapidapi.com",
-        "x-rapidapi-key": process.env.RAPID_API_KEY,
+        "x-rapidapi-key": environment.rapidApiKey,
   
         "useQueryString": true
       }
@@ -122,7 +123,7 @@ export class ResultpageComponent implements OnInit {
       },
       headers: {
         "x-rapidapi-host": "webit-news-search.p.rapidapi.com",
-        "x-rapidapi-key": process.env.RAPID_API_KEY,
+        "x-rapidapi-key": environment.rapidApiKey,
   
         "useQueryString": true
       }
