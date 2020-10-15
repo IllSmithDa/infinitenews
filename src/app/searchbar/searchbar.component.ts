@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 @Component({
   selector: 'app-searchbar',
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.scss']
 })
+
 export class SearchbarComponent implements OnInit {
   searchQuery = '';
   constructor( private route: ActivatedRoute,
-    private router: Router) { }
+  private router: Router) { }
 
   ngOnInit(): void {
   }
+  
   updateQuery(id: string, selectVal: string) {
 
     this.searchQuery = selectVal;
@@ -22,3 +25,4 @@ export class SearchbarComponent implements OnInit {
   window.location.href = '/results/' + this.searchQuery + '/1';
   }
 }
+
