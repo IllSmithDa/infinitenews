@@ -1,5 +1,6 @@
+// 464866
 .resultpage-container {
-    background-color: #3F3F3F;
+    background-color: #265077;
     background-size: cover;
     background-position: center; 
     min-height: 100vh;
@@ -13,7 +14,7 @@
     flex-direction: column;
     width: 100%;
     padding: 2rem 0 4rem 0;
-    background-color: #3F3F3F;
+    background-color: inherit;
     div{
       width: 500px;
     }
@@ -77,21 +78,22 @@
     border-radius: 2px;
   };
 }
+.result-card {
+  width: 1023px;
+  margin: auto;
+  background-color: #265077;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
 .news-item {
   display: flex;
-  background-color: #202020;
+  background-color: inherit;
   padding: 1rem 0 1rem 0;
   margin-bottom: 2rem;
   border-radius: 1rem;
 }
 
-.result-card {
-  width: 1023px;
-  margin: auto;
-  background-color: #202020;
-  padding: 2rem;
-  border-radius: 1rem;
-}
 
 @media(max-width: 1200px) {
   .result-card {

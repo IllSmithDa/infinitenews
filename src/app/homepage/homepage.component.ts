@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import axios from 'axios';
 
 @Component({
   selector: 'app-homepage',
@@ -7,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
   searchQuery = '';
+  resultList = [];
+  offsetVal = 0;
+  newIndex = 1;
   constructor() { }
 
   ngOnInit(): void {
-    this.getAllCards();
+    this.getTrendingNews();
   }
   getAllCards() {
     var xhttp = new XMLHttpRequest();
@@ -27,5 +32,51 @@ export class HomepageComponent implements OnInit {
     xhttp.setRequestHeader("x-rapidapi-key", "ad2d5e1988mshaf187ed2494f60bp1258a4jsne733ba5dd9fb");
     xhttp.send(data);
   }
+  getTrendingNews() {
+    axios({
+      method: 'get',
+      url: 'https://rapidapi.p.rapidapi.com/trending',
+      headers: {
+        "x-rapidapi-host": "webit-news-search.p.rapidapi.com",
+        "x-rapidapi-key": environment.rapidApiKey,
+        "useQueryString": true
+      }
+    })
+    .then((data) => {
+      let results = data.data.data.results;
 
+        console.log(data);
+        for (let i = 0; i < results.length; i++) {
+          results[i].provider = (new URL(results[i].url)).hostname;
+          results[i].newsIndex = this.newIndex;
+          this.newIndex += 1;
+          if (results[i].description === undefined) {
+            results[i].description = "No Description Available";
+          } else {
+            var txt = document.createElement("textarea");
+            txt.innerHTML = results[i].description;
+            results[i].description = txt.value.replace( /(<([^>]+)>)/ig, '');
+          }
+            /*
+            let newImageObj = {
+              thumbnail: {
+                contentUrl: 'https://ctt.trains.com/sitefiles/images/no-preview-available.png'
+              }
+            }
+            */
+           if (results[i].image === undefined) {
+            results[i].image = 'https://ctt.trains.com/sitefiles/images/no-preview-available.png';
+          }
+          if (results[i].description === undefined) {
+            results[i].description = "No Description Available";
+          }
+        }
+        if (this.resultList.length === 0) {
+          this.resultList = results;
+        } else {
+          this.resultList = this.resultList.concat(results);
+        }
+        this.offsetVal += 10;
+    })
+  }
 }

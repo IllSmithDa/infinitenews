@@ -1,3 +1,6 @@
+.app-container {
+  background-color: #022140;
+}
 .landing-container {
     background-image: url('https://images.pexels.com/photos/41949/earth-earth-at-night-night-lights-41949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-size: cover;
@@ -25,12 +28,126 @@
     width: 500px;
   }
 }
+.trending-container {
+  background-color: #022140;
+  background-size: cover;
+  background-position: center; 
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
 
-@media(max-width: 850px) {
-  .searchbar-container {
-    div {
-      width: 90%;
+.result-card {
+  width: 1023px;
+  margin: 2rem auto 0 auto;
+  background-color: #022140;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.landing-title {
+
+  h1 {
+    font-size: 2rem;
+   
+    color: #FFF;
+  }
+}
+.news-text {
+
+  padding-left: 2rem;
+
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #FFF;
+  }
+  span {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFF;
+  }
+  p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #FFF;
+  }
+  a {
+      color: #FFF;
+  }
+}
+.image-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    width: 325px;
+    height: 225px;
+    border-radius: 2px;
+  };
+}
+.news-item {
+  display: flex;
+  background-color: inherit;
+  padding: 1rem 0 1rem 0;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+
+@media(max-width: 1200px) {
+  .result-card {
+    width: 800px;
+  }
+  .news-text{
+    h1 {
+      font-size: 1rem
+    }
+    p {
+      font-size: .9rem;
+    }
+  }
+  .image-container {
+    margin-bottom: 1rem;
+
+    img {
+      width: 275px;
+      height: 200px
     }
   }
 }
 
+@media(max-width: 850px) {
+  .landing-title {
+    h1 {
+      text-align: center;
+      margin:0;
+      font-size: 1.8rem;
+    }
+  }
+  .news-item {
+    display: block;    
+  }
+  .result-card {
+    width: 95%;
+    padding: .75rem;
+  }
+  .image-container {
+    margin-bottom: 1rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .news-text {
+    padding-left: 0;
+  }
+  .searchbar-container {
+    div{
+      width: 90%;
+    }
+  }
+}

@@ -1,10 +1,44 @@
-<div class="landing-container">
-    <div>
-        <app-navbar></app-navbar>
-    </div>
-    <div class="searchbar-container">
-        <div >
-            <app-searchbar></app-searchbar>
+<div class="app-container">
+    <div class="landing-container">
+        <div>
+            <app-navbar></app-navbar>
         </div>
+        <div class="searchbar-container">
+            <div >
+                <app-searchbar></app-searchbar>
+            </div>
+        </div>
+    </div>
+    <div class="trending-container"
+                infiniteScroll
+                [infiniteScrollDistance]="1"
+                [infiniteScrollThrottle]="50"
+                (scrolled)="getTrendingNews()">
+        <div class="result-card">
+            <div class="landing-title">
+                <h1>Trending</h1>
+            </div>
+            <div class="result-container">
+                <div *ngFor="let result of resultList" class="news-item">
+                    <div>
+                        <div class="image-container">
+                            <img src="{{result.image}}" onerror="this.src='https://ctt.trains.com/sitefiles/images/no-preview-available.png'"/>
+                        </div>
+                    </div>
+                    <div class="news-text">
+                        <h1>{{result.newsIndex}}. <a target="_blank" href="{{result.url}}" >{{result.title}}</a></h1>
+                        <p>Source: <a target="_blank" href="https://{{result.provider}}">{{result.provider}}</a></p>
+                        <p>{{result.date}}</p>
+                        <p>{{result.description}}</p>
+                        <span><a target="_blank" href="{{result.url}}" >See Full Story</a></span>
+                        <div></div>
+                        <div class="fb-share-button" 
+                        data-href="{{result.url}}" 
+                        data-layout="button">
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
     </div>
 </div>
