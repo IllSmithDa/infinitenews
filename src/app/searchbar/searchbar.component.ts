@@ -8,7 +8,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 
 export class SearchbarComponent implements OnInit {
-  searchQuery = '';
+  searchQuery = 'Today';
   constructor( private route: ActivatedRoute,
   private router: Router) { }
 
