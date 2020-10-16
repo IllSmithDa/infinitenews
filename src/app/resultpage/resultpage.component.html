@@ -19,7 +19,7 @@
             <div *ngFor="let result of resultList" class="news-item">
                 <div>
                     <div class="image-container">
-                        <img src="{{result.image}}"/>
+                        <img src="{{result.image}}" onerror="this.src='https://ctt.trains.com/sitefiles/images/no-preview-available.png'"/>
                     </div>
                 </div>
                 <div class="news-text">
@@ -28,6 +28,11 @@
                     <p>{{result.date}}</p>
                     <p>{{result.description}}</p>
                     <span><a target="_blank" href="{{result.url}}" >See Full Story</a></span>
+                    <div class="fb-share-button" 
+                    data-href="{{result.url}}" 
+                    data-layout="button">
+                    </div>
+
                 </div>
             </div>
         </div>
