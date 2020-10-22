@@ -1,6 +1,6 @@
 <div class="resultpage-container"
             infiniteScroll
-            [infiniteScrollDistance]="1"
+            [infiniteScrollDistance]="1.2"
             [infiniteScrollThrottle]="50"
             (scrolled)="getAllNews()"
 >
@@ -11,9 +11,13 @@
             <app-searchbar></app-searchbar>
         </div>
     </div>
+
     <div class="result-card">
         <div class="landing-title">
             <h1>Results for {{searchQuery}}</h1>
+        </div>
+        <div id="loader-container">
+          <app-loader></app-loader>
         </div>
         <div class="result-container">
             <div *ngFor="let result of resultList" class="news-item">

@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { LoaderComponent } from './loader/loader.component';
 declare var $: any;
 console.log(`jQuery version: ${$.fn.jquery}`);
 @NgModule({
@@ -18,7 +19,8 @@ console.log(`jQuery version: ${$.fn.jquery}`);
     HomepageComponent,
     ResultpageComponent,
     SearchbarComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

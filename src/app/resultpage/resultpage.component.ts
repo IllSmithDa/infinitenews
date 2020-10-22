@@ -108,6 +108,7 @@ export class ResultpageComponent implements OnInit {
           this.resultList = this.resultList.concat(results);
         }
         this.offsetVal += 10;
+        document.getElementById('loader-container').style.display = 'none';
     })
   }
   getMoreNews() {

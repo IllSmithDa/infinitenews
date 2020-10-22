@@ -11,18 +11,23 @@
     </div>
     <div class="trending-container"
                 infiniteScroll
-                [infiniteScrollDistance]="1"
+                [infiniteScrollDistance]="1.2"
                 [infiniteScrollThrottle]="50"
                 (scrolled)="getTrendingNews()">
         <div class="result-card">
             <div class="landing-title">
                 <h1>Trending</h1>
             </div>
+            <div id="loader-container">
+                <app-loader></app-loader>
+            </div>
             <div class="result-container">
                 <div *ngFor="let result of resultList" class="news-item">
                     <div>
                         <div class="image-container">
+                            <a target="_blank" href="{{result.url}}" >
                             <img src="{{result.image}}" onerror="this.src='https://ctt.trains.com/sitefiles/images/no-preview-available.png'"/>
+                        </a>
                         </div>
                     </div>
                     <div class="news-text">
