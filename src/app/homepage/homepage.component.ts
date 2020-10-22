@@ -36,6 +36,9 @@ export class HomepageComponent implements OnInit {
     axios({
       method: 'get',
       url: 'https://rapidapi.p.rapidapi.com/trending',
+      params: {
+        "offset": this.offsetVal
+      },
       headers: {
         "x-rapidapi-host": "webit-news-search.p.rapidapi.com",
         "x-rapidapi-key": environment.rapidApiKey,
