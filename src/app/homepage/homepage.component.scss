@@ -1,5 +1,7 @@
+@import '../app.component.scss';
+
 .app-container {
-  background-color: #022140;
+  background-color: $shadow-dark-blue;
 }
 .landing-container {
     background-image: url('https://images.pexels.com/photos/41949/earth-earth-at-night-night-lights-41949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
@@ -30,7 +32,6 @@
   }
 }
 .trending-container {
-  background-color: #022140;
   background-size: cover;
   background-position: center; 
   min-height: 100vh;
@@ -40,7 +41,7 @@
 .result-card {
   width: 1023px;
   margin: 2rem auto 0 auto;
-  background-color: #022140;
+  background-color: $dark-blue;
   padding: 2rem;
   border-radius: 1rem;
 }

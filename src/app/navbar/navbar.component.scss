@@ -1,8 +1,9 @@
+@import '../app.component.scss';
 // 5D5C61
 .comp-container{
     width: 100%;
     height: 50px;
-    background-color: #022140;
+    background-color: $cool-dark-blue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +27,7 @@
     display: none;
 }
 #collapsibleNavbar {
-    background-color: #022140;
+    background-color: $cool-dark-blue;
     text-align: center;
 }
 .nav-item {
@@ -39,7 +40,7 @@
     color: #FFF;
 }
 .mobile-nav-button {
-    background-color: #022140;
+    background-color: $cool-dark-blue;
     color: #FFF;
     font-size: 1.2rem;
     border-radius: .3rem;
@@ -50,7 +51,7 @@
     .navbar-display {
         display: flex;
         justify-content: space-between;
-        background-color: #022140;
+        background-color: $cool-dark-blue;
     }
     .comp-container {
         display: none;

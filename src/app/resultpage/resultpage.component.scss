@@ -1,6 +1,7 @@
+@import '../app.component.scss';
 // 464866
 .resultpage-container {
-    background-color: #265077;
+    background-color: $shadow-dark-blue;
     background-size: cover;
     background-position: center; 
     min-height: 100vh;
@@ -81,7 +82,7 @@
 .result-card {
   width: 1023px;
   margin: auto;
-  background-color: #265077;
+  background-color: $dark-blue;
   padding: 2rem;
   border-radius: 1rem;
 }
