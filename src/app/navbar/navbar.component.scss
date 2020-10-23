@@ -3,7 +3,7 @@
 .comp-container{
     width: 100%;
     height: 50px;
-    background-color: $cool-dark-blue;
+    background-color: $dark-blue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,7 @@
     display: none;
 }
 #collapsibleNavbar {
-    background-color: $cool-dark-blue;
+    background-color: $dark-blue;
     text-align: center;
 }
 .nav-item {
@@ -40,7 +40,7 @@
     color: #FFF;
 }
 .mobile-nav-button {
-    background-color: $cool-dark-blue;
+    background-color: $dark-blue;
     color: #FFF;
     font-size: 1.2rem;
     border-radius: .3rem;
@@ -51,7 +51,7 @@
     .navbar-display {
         display: flex;
         justify-content: space-between;
-        background-color: $cool-dark-blue;
+        background-color: $dark-blue;
     }
     .comp-container {
         display: none;
