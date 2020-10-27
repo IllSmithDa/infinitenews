@@ -23,17 +23,19 @@
             <div *ngFor="let result of resultList" class="news-item">
                 <div>
                     <div class="image-container">
-                        <img src="{{result.image}}" onerror="this.src='https://ctt.trains.com/sitefiles/images/no-preview-available.png'"/>
-                    </div>
+                        <a target="_blank" href="{{result.url}}" >
+                          <img src="{{result.image}}" onerror="this.src='https://ctt.trains.com/sitefiles/images/no-preview-available.png'"/>
+                        </a>
+                      </div>
                 </div>
                 <div class="news-text">
                     <h1>{{result.newsIndex}}. <a target="_blank" href="{{result.url}}" >{{result.title}}</a></h1>
-                    <p>Source: <a target="_blank" href="https://{{result.provider}}">{{result.provider}}</a></p>
+                    <p><b>Source:</b> <a target="_blank" href="https://{{result.provider}}"> {{result.provider}}</a></p>
                     <p>{{result.date}}</p>
                     <p>{{result.description}}</p>
                     <span><a target="_blank" href="{{result.url}}" >See Full Story</a></span>
                     <div class="fb-share-button" 
-                    data-href="{{result.url}}" 
+                    href="{{result.url}}" 
                     data-layout="button">
                     </div>
 
