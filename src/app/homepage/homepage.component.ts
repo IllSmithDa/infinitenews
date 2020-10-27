@@ -29,7 +29,7 @@ export class HomepageComponent implements OnInit {
     }
     xhttp.open("GET", "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards");
     xhttp.setRequestHeader("x-rapidapi-host", "omgvamp-hearthstone-v1.p.rapidapi.com");
-    xhttp.setRequestHeader("x-rapidapi-key", "ad2d5e1988mshaf187ed2494f60bp1258a4jsne733ba5dd9fb");
+    xhttp.setRequestHeader("x-rapidapi-key", environment.rapidApiKey);
     xhttp.send(data);
   }
   getTrendingNews() {

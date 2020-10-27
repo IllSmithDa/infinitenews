@@ -1,7 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-
 import axios from 'axios';
 import { environment } from 'src/environments/environment';
 import { Url }from 'url';
