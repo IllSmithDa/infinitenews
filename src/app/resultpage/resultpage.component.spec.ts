@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {RouterTestingModule} from '@angular/router/testing';
 import { ResultpageComponent } from './resultpage.component';
 
 describe('ResultpageComponent', () => {
@@ -8,7 +8,8 @@ describe('ResultpageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResultpageComponent ]
+      declarations: [ ResultpageComponent ],
+      imports: [RouterTestingModule],
     })
     .compileComponents();
   });

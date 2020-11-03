@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  rapidApiKey:'ad2d5e1988mshaf187ed2494f60bp1258a4jsne733ba5dd9fb'
+  rapidApiKey:process.env.RAPIDAPIKEY
 };
 
 /*

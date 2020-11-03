@@ -22,4 +22,11 @@ describe('HomepageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(HomepageComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.landing-title h1').textContent).toContain('Trending');
+  });
 });
